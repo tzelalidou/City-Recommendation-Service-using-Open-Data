@@ -133,8 +133,8 @@ public abstract class Traveller   {
             }
         }
         Collections.sort(lotcities);
-        //check if object is null
-        //delete the new array after a period of time because chance of crashing or delay
+       
+      
         ArrayList<City> cities_with_max_sim=new ArrayList<>();
             try {
                 for(int i=0;i<x;i++) {
