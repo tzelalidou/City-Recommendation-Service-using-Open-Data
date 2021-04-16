@@ -103,7 +103,7 @@ public abstract class Traveller   {
     public abstract double similarity_terms_vector(City city);
 
     public  City compare_cities(ArrayList<City> cities){
-        //made a new object with constructor maybe not right check again
+        //copy an object to another
         City res=new City(cities.get(0));
 
         for(int k=0;k<cities.size();k++){
