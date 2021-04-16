@@ -32,6 +32,7 @@ public abstract class Traveller   {
     public Traveller(int[] grade,int age) {
         this.grade = grade;
         this.age=age;
+        local_geodesic=new double[2];
     }
 
     //getters setters
@@ -46,10 +47,10 @@ public abstract class Traveller   {
     public void setGrade(int[] grade) { this.grade = grade; }
     public void setLocal_geodesic(String hisCountry,String hisCountryAbbrev) throws IOException {
         OpenWeatherMap weather_object = OpenData.RetrieveData(hisCountry, hisCountryAbbrev, "8a6696995628d4ee57726b05d30030d4");
-        //double [] ar={weather_object.getCoord().getLat(),weather_object.getCoord().getLon()};
-        //this.setLocal_geodesic(ar);
-        this.setLocal_geodesic(0, weather_object.getCoord().getLat());
-        this.setLocal_geodesic(1, weather_object.getCoord().getLon());
+        double [] ar={weather_object.getCoord().getLat(),weather_object.getCoord().getLon()};
+        this.setLocal_geodesic(ar);
+        //this.setLocal_geodesic(0, weather_object.getCoord().getLat());
+        //this.setLocal_geodesic(1, weather_object.getCoord().getLon());
 
     }
     public int getAge() { return age;}
