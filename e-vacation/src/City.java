@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class City implements Comparable<City> {
     //attributes
-    //sea,,museum,University,stadium,Church,theater,park,Art,fashion,Bridge
+    //sea,museum,university,stadium,church,cafe,park,art,fashion,bridge
     private int  [] term_vectors;
     //latitude,longitude
     protected static final int MAX_SIZE = 10;
@@ -17,7 +17,7 @@ public class City implements Comparable<City> {
     private String name;
     private String country_abbrev;
     private double similarity;
-    private final String  [] criterion_wiki={"Sea","Museum","University","Stadium","Church","Theater","park","Art","fashion","Bridge"};
+    private final String  [] criterion_wiki={"sea","museum","university","stadium","church","cafe","park","art","fashion","bridge"};
 
     //Constructors
 
